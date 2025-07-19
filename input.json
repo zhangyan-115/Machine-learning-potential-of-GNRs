@@ -1,0 +1,66 @@
+{
+    "_comment": " model parameters",
+    "model": {
+                 "type_map":	["C","H"],
+	"descriptor" :{
+	    "type":		"se_e2_a",
+	    "sel":		"auto",
+	    "rcut_smth":	0.50,
+	    "rcut":		5.00,
+	    "neuron":		[25, 50, 100],
+	    "resnet_dt":	false,
+	    "axis_neuron":	16,
+	    "seed":		1,
+	    "_comment":		" that's all"
+	},
+	"fitting_net" : {
+	    "neuron":		[240, 240, 240],
+	    "resnet_dt":	true,
+	    "seed":		1,
+	    "_comment":		" that's all"
+	},
+	"_comment":	" that's all"
+    },
+
+    "learning_rate" :{
+	"type":		"exp",
+	"decay_steps":	5000,
+	"start_lr":	0.001,	
+	"stop_lr":	3.51e-8,
+	"_comment":	"that's all"
+    },
+
+    "loss" :{
+	"type":		"ener",
+	"start_pref_e":	0.02,
+	"limit_pref_e":	1,
+	"start_pref_f":	1000,
+	"limit_pref_f":	1,
+	"start_pref_v":	0,
+	"limit_pref_v":	0,
+	"_comment":	" that's all"
+    },
+
+    "training" : {
+	"training_data": {
+	    "systems":		["./data/data_0/","./data/data_1/","./data/data_2/","./data/data_3/","./data/data_4/","./data/data_5/","./data/data_6/","./data/data_7/","./data/data_8/","./data/data_9/","./data/data_10/","./data/data_11/","./data/data_12/","./data/data_13/","./data/data_14/","./data/data_15/","./data/data_16/","./data/data_17/","./data/data_18/","./data/data_19/","./data/data_20/","./data/data_21/","./data/data_22/","./data/data_23/","./data/data_24/","./data/data_25/","./data/data_26/","./data/data_27/","./data/data_28/","./data/data_29/","./data/data_30/","./data/data_31/","./data/data_32/","./data/data_33/","./data/data_34/","./data/data_35/","./data/data_36/","./data/data_37/","./data/data_38/","./data/data_39/","./data/data_40/","./data/data_41/","./data/data_42/","./data/data_43/","./data/data_44/","./data/data_45/","./data/data_46/","./data/data_47/","./data/data_48/","./data/data_49/","./data/data_50/","./data/data_51/","./data/data_52/","./data/data_53/","./data/data_54/","./data/data_55/","./data/data_56/","./data/data_57/","./data/data_58/","./data/data_59/","./data/data_60/","./data/data_61/","./data/data_62/","./data/data_63/","./data/data_64/","./data/data_65/","./data/data_66/","./data/data_67/","./data/data_68/","./data/data_69/","./data/data_70/","./data/data_71/","./data/data_72/","./data/data_73/","./data/data_74/","./data/data_75/","./data/data_76/","./data/data_77/","./data/data_78/","./data/data_79/","./data/data_80/","./data/data_81/","./data/data_82/","./data/data_83/","./data/data_84/","./data/data_85/","./data/data_86/","./data/data_87/","./data/data_88/","./data/data_89/","./data/data_90/","./data/data_91/","./data/data_92/","./data/data_93/","./data/data_94/","./data/data_95/","./data/data_96/","./data/data_97/","./data/data_98/","./data/data_99/","./data/data_100/","./data/data_101/","./data/data_102/","./data/data_103/","./data/data_104/","./data/data_105/","./data/data_106/","./data/data_107/","./data/data_108/","./data/data_109/","./data/data_110/","./data/data_111/","./data/data_112/","./data/data_113/","./data/data_114/","./data/data_115/","./data/data_116/","./data/data_117/","./data/data_118/","./data/data_119/"],
+              "batch_size":         "auto",
+	    "_comment":		"that's all"
+	},
+	"validation_data":{
+	    "systems":		["./data/data_600/","./data/data_601/","./data/data_602/","./data/data_603/","./data/data_604/","./data/data_605/","./data/data_606/","./data/data_607/","./data/data_608/","./data/data_609/","./data/data_610/","./data/data_611/"],
+	    "batch_size":	1,
+	    "numb_btch":	10,
+	    "_comment":		"that's all"
+	},
+	"numb_steps":	1000000,
+	"seed":		10,
+	"disp_file":	"lcurve.out",
+	"disp_freq":	100,
+	"save_freq":	1000,
+	"_comment":	"that's all"
+    },    
+
+    "_comment":		"that's all"
+}
+
